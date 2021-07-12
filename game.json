@@ -169,22 +169,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 51,
-          "layer": "",
-          "locked": false,
-          "name": "Frame",
-          "persistentUuid": "8c44e2b1-4218-485c-a05b-a67024c7e5db",
-          "width": 284,
-          "x": 240,
-          "y": 534,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -399,52 +383,6 @@
             }
           ],
           "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Frame",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "InputCJK_Extension::InputCJK_Behavior::CloseInputField"
-              },
-              "parameters": [
-                "SearchButton",
-                "InputCJK_Extension",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         }
       ],
       "layers": [
@@ -518,7 +456,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "if (!gdjs._InputCJK_Extension) {\n    const CSS = document.createElement(\"style\");\n    CSS.innerHTML = `\n    /*CSS Start ================================================*/\n    #InputCJK_Extension_div {\n        position: absolute;\n        display: flex;\n        flex-flow: column nowrap;\n        justify-content: space-around;\n        background-color: #ffffff;\n        padding: 5vmin;\n        top: 25vh;\n        right: 25vw;\n        left: 25vw;\n        bottom: 25vh;\n        border-radius: 2vmin;\n    }\n    #InputCJK_Extension_div input {\n        font-size: 6vmin;\n        height: 10vh;\n    }\n    #InputCJK_Extension_div button {\n        height: 10vh;\n        border-radius: 2vmin;\n        background-color: #cccccc;\n        border: none;\n        font-size: 6vmin;\n    }\n    /*CSS End ==================================================*/\n    `;\n    const DIV = document.createElement(\"div\");\n    DIV.id = \"InputCJK_Extension_div\";\n    DIV.innerHTML = \"<input type='text'><button type='button'>OK</button>\";\n    document.body.appendChild(CSS);\n    document.body.appendChild(DIV);\n    //\n    gdjs._InputCJK_Extension = {};\n    const VarSTR = objects[0].getVariables().get(\"_InputCJK_Extension_string\");\n    const IPT = document.querySelector(\"#InputCJK_Extension_div input\");\n    const BTN = document.querySelector(\"#InputCJK_Extension_div button\");\n    gdjs._InputCJK_Extension.onClickOk = function (evt) {\n        VarSTR.setString(IPT.value);\n        gdjs._InputCJK_Extension.hide();\n        evt.stopPropagation();\n    };\n    BTN.addEventListener(\"touchend\", gdjs._InputCJK_Extension.onClickOk, false);\n    BTN.addEventListener(\"click\", gdjs._InputCJK_Extension.onClickOk, false);\n    IPT.addEventListener(\"touchstart\", (evt) => {evt.stopPropagation();}, false);\n    IPT.addEventListener(\"touchmove\", (evt) => {evt.stopPropagation();}, false);\n    IPT.addEventListener(\"touchend\", (evt) => {evt.stopPropagation();}, false);\n    //\n    gdjs._InputCJK_Extension.show = function (STR) {\n        IPT.value = STR;\n        DIV.style.display =\"flex\";\n    };\n    gdjs._InputCJK_Extension.hide = function () {\n        DIV.style.display =\"none\";\n    };\n    gdjs._InputCJK_Extension.hide();\n}\n",
+                  "inlineCode": "if (!gdjs._InputCJK_Extension) {\n    const CSS = document.createElement(\"style\");\n    CSS.innerHTML = `\n    /*CSS Start ================================================*/\n    #InputCJK_Extension_div {\n        position: absolute;\n        display: flex;\n        flex-flow: column nowrap;\n        justify-content: space-around;\n        background-color: #ffffff;\n        padding: 5vmin;\n        top: 25vh;\n        right: 25vw;\n        left: 25vw;\n        bottom: 25vh;\n        border-radius: 2vmin;\n    }\n    #InputCJK_Extension_div input {\n        font-size: 6vmin;\n        height: 10vh;\n    }\n    #InputCJK_Extension_div button {\n        height: 10vh;\n        border-radius: 2vmin;\n        background-color: #cccccc;\n        border: none;\n        font-size: 6vmin;\n    }\n    /*CSS End ==================================================*/\n    `;\n    const DIV = document.createElement(\"div\");\n    DIV.id = \"InputCJK_Extension_div\";\n    DIV.innerHTML = \"<input type='text'><button type='button'>OK</button>\";\n    document.body.appendChild(CSS);\n    document.body.appendChild(DIV);\n    //\n    gdjs._InputCJK_Extension = {};\n    const VarSTR = objects[0].getVariables().get(\"_InputCJK_Extension_string\");\n    const IPT = document.querySelector(\"#InputCJK_Extension_div input\");\n    const BTN = document.querySelector(\"#InputCJK_Extension_div button\");\n    gdjs._InputCJK_Extension.onClickOk = function (evt) {\n        VarSTR.setString(IPT.value);\n        gdjs._InputCJK_Extension.hide();\n        evt.stopPropagation();\n    };\n    BTN.addEventListener(\"touchend\", gdjs._InputCJK_Extension.onClickOk, false);\n    BTN.addEventListener(\"click\", gdjs._InputCJK_Extension.onClickOk, false);\n    IPT.addEventListener(\"touchstart\", (evt) => {evt.stopPropagation();}, false);\n    IPT.addEventListener(\"touchmove\", (evt) => {evt.stopPropagation();}, false);\n    IPT.addEventListener(\"touchend\", (evt) => {evt.stopPropagation();}, false);\n    //\n    gdjs._InputCJK_Extension.show = function (STR) {\n        IPT.value = STR;\n        DIV.style.display =\"flex\";\n\n\n        \n\n        runtimeScene.getGame().getRenderer().setFullScreen();\n\n\n\n\n\n    };\n    gdjs._InputCJK_Extension.hide = function () {\n        DIV.style.display =\"none\";\n\n\n\n\n\n\n        window.dispatchEvent(new Event(\"resize\"));\n\n\n\n\n        \n    };\n    gdjs._InputCJK_Extension.hide();\n\n\n\n\n\n\n\n    window.addEventListener(\"resize\", (evt) => {\n        gdjs._InputCJK_Extension.show();\n        IPT.value = \"resize\";\n        runtimeScene.getGame().getRenderer().setFullScreen();\n        }, false);\n}\n",
                   "parameterObjects": "Object",
                   "useStrict": true,
                   "eventsSheetExpanded": true
