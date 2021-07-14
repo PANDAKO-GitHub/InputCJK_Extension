@@ -8,3 +8,5 @@ Add and use behaviors to any object.
 Please download the latest version from [Releases](https://github.com/PANDAKO-GitHub/InputCJK_Extension/releases).
 
 MIT License
+
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/img/img01.png)
