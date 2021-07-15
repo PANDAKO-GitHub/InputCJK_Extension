@@ -23,3 +23,32 @@ MIT License
 5. Create an event using the "Conditions", "Actions", and "Expressions" added by the extension.
 
 ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img02.png)
+
+## Reference
+
+### Conditions
+
+#### Is Close
+Input Field is close.
+
+#### Is Finished
+Input Field has just been closed.
+
+#### Is Open
+Input Field is open.
+
+### Actions
+
+#### Close Input Field  
+Close the Input Field.
+
+#### Open Input Field  
+Open the Input Field.
+
+#### Set String  
+Set a string to the Input Field.
+
+### String Expressions
+
+#### String
+Get a string from the Input Field.
