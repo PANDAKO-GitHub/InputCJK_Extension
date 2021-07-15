@@ -79,250 +79,6 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "sample_32scene",
-      "name": "sample scene",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridType": "rectangular",
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 0.7799999999999998
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Output",
-          "persistentUuid": "a31ab6f8-807b-42c3-8530-445a8dc9073c",
-          "width": 0,
-          "x": 317,
-          "y": 238,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 540,
-          "layer": "",
-          "locked": false,
-          "name": "PinkBackground",
-          "persistentUuid": "1ee177f8-09ed-4557-845d-92e108a61c61",
-          "width": 960,
-          "x": 0,
-          "y": 0,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 36,
-          "layer": "",
-          "locked": false,
-          "name": "Frame",
-          "persistentUuid": "1dc5243b-02ba-42b7-b7b4-bdd228c3fd26",
-          "width": 346,
-          "x": 307,
-          "y": 232,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [
-        {
-          "bold": false,
-          "italic": false,
-          "name": "Output",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "こんにちは 你好 안녕하세요",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "height": 128,
-          "name": "PinkBackground",
-          "tags": "",
-          "texture": "tiled_Pink Background.png",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 128,
-          "variables": [],
-          "behaviors": []
-        },
-        {
-          "bottomMargin": 6,
-          "height": 32,
-          "leftMargin": 6,
-          "name": "Frame",
-          "rightMargin": 6,
-          "tags": "",
-          "texture": "Frame-1.png",
-          "tiled": false,
-          "topMargin": 6,
-          "type": "PanelSpriteObject::PanelSprite",
-          "width": 32,
-          "variables": [],
-          "behaviors": [
-            {
-              "name": "InputCJK_Behavior",
-              "type": "InputCJK_Extension::InputCJK_Behavior"
-            }
-          ]
-        }
-      ],
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Frame",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "InputCJK_Extension::InputCJK_Behavior::OpenInputField"
-              },
-              "parameters": [
-                "Frame",
-                "InputCJK_Behavior",
-                "Output.String()",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "InputCJK_Extension::InputCJK_Behavior::IsFinished"
-              },
-              "parameters": [
-                "Frame",
-                "InputCJK_Behavior",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "Output",
-                "=",
-                "Frame.InputCJK_Behavior::String()"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        }
-      ],
-      "layers": [
-        {
-          "ambientLightColorB": 662980,
-          "ambientLightColorG": 1262,
-          "ambientLightColorR": 7103440,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "InputCJK_Behavior",
-          "type": "InputCJK_Extension::InputCJK_Behavior"
-        }
-      ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
       "mangledName": "multiple_32scene",
       "name": "multiple scene",
       "oglFOV": 90,
@@ -726,6 +482,250 @@
                 "Output",
                 "=",
                 "InputCJK.InputCJK_Behavior::String()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 662980,
+          "ambientLightColorG": 1262,
+          "ambientLightColorR": 7103440,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "InputCJK_Behavior",
+          "type": "InputCJK_Extension::InputCJK_Behavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "sample_32scene",
+      "name": "sample scene",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.7799999999999998
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Output",
+          "persistentUuid": "a31ab6f8-807b-42c3-8530-445a8dc9073c",
+          "width": 0,
+          "x": 317,
+          "y": 238,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 540,
+          "layer": "",
+          "locked": false,
+          "name": "PinkBackground",
+          "persistentUuid": "1ee177f8-09ed-4557-845d-92e108a61c61",
+          "width": 960,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 36,
+          "layer": "",
+          "locked": false,
+          "name": "Frame",
+          "persistentUuid": "1dc5243b-02ba-42b7-b7b4-bdd228c3fd26",
+          "width": 346,
+          "x": 307,
+          "y": 232,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Output",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "こんにちは 你好 안녕하세요",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "height": 128,
+          "name": "PinkBackground",
+          "tags": "",
+          "texture": "tiled_Pink Background.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 128,
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "bottomMargin": 6,
+          "height": 32,
+          "leftMargin": 6,
+          "name": "Frame",
+          "rightMargin": 6,
+          "tags": "",
+          "texture": "Frame-1.png",
+          "tiled": false,
+          "topMargin": 6,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "InputCJK_Behavior",
+              "type": "InputCJK_Extension::InputCJK_Behavior"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Frame",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "InputCJK_Extension::InputCJK_Behavior::OpenInputField"
+              },
+              "parameters": [
+                "Frame",
+                "InputCJK_Behavior",
+                "Output.String()",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "InputCJK_Extension::InputCJK_Behavior::IsFinished"
+              },
+              "parameters": [
+                "Frame",
+                "InputCJK_Behavior",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Output",
+                "=",
+                "Frame.InputCJK_Behavior::String()"
               ],
               "subInstructions": []
             }
