@@ -1,4 +1,4 @@
-# InputCJK_Extension
+# InputCJK Extension
 日本語は下の方を見てね。
 
 This is an extension for GDevelop that allows you to input multi-byte characters (Japanese, Chinese, Korean, etc.).
@@ -16,7 +16,7 @@ MIT License
 - It can be used in mobile apps, but there is a slight problem.
 - It is practical, but there is room for improvement.
 - It is not a modal window. The game behind it can be manipulated.
-- Even if there are multiple objects to which this behavior is added, there will be only one Input Field generated.
+- Do not place multiple instances with this extension in a scene.
 
 ## How to use
 1. Download the extension (.json).
@@ -56,4 +56,26 @@ Set a string to the Input Field.
 #### String
 Get a string from the Input Field.
 
-## Design customization
+## If you need multiple input fields.
+Do not place multiple instances with this extension in a scene. The "Is Finished" condition will no longer work.
+
+Even if there are multiple objects to which this behavior is added, there will be only one Input Field generated.
+
+
+
+## Design customization (advanced)
+This extension is designed to work with various resolutions, but if you want to change the appearance, you need to edit the extension.
+
+Edit the stylesheet written in onCreated of Behavior functions.
+
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img03.png)
+
+### HTML
+```
+<div id="InputCJK_Extension_div" style="display: none;">
+  <input type="text">
+  <button type="button">OK</button>
+</div>
+```
+
+## Known Issues
