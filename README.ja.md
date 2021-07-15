@@ -61,16 +61,21 @@ MIT License
 Is Finished の条件が機能しなくなります。
 （この拡張機能で生成される入力欄は1つだけです）
 
+次の画像のように変数を使い、ひとつのインスタンスで入力欄を管理してください。  
+「リンクされたオブジェクト」機能を利用するのも良いかもしれません。
 
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img07.png)
 
-## Design customization (advanced)
-This extension is designed to work with various resolutions, but if you want to change the appearance, you need to edit the extension.
+## デザインのカスタマイズ（むずい）
+入力欄の見た目を変更したい場合は、拡張機能を編集する必要があります。
+また、この拡張機能は色々な解像度で動作するように作られていますが、より最適化したい場合も同様です。
 
-Edit the stylesheet written in onCreated of Behavior functions.
+ビヘイビア関数の onCreated 内に書かれているスタイルシートを編集してください。
 
 ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img05.png)
 
 ### HTML
+入力欄の HTML 構造はこんな感じ。
 ```
 <div id="InputCJK_Extension_div" style="display: none;">
   <input type="text">
@@ -78,4 +83,5 @@ Edit the stylesheet written in onCreated of Behavior functions.
 </div>
 ```
 
-## Known Issues
+## 既知の問題点
+- この拡張機能をAndroidアプリ(.apk)で使用すると、ステータスバーとナビゲーションバーが表示されたままになり、ゲーム画面の一部を隠してしまいます。
