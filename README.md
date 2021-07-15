@@ -61,6 +61,9 @@ Do not place multiple instances with this extension in a scene. The "Is Finished
 
 Even if there are multiple objects to which this behavior is added, there will be only one Input Field generated.
 
+This can be solved by using variables or "Linked Objects".
+
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img06.png)
 
 
 ## Design customization (advanced)
@@ -79,3 +82,4 @@ Edit the stylesheet written in onCreated of Behavior functions.
 ```
 
 ## Known Issues
+- When this extension is used in an Android app (.apk), the status bar and navigation bar will remain visible, covering part of the screen.
