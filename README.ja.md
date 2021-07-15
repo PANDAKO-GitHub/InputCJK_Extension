@@ -42,24 +42,24 @@ MIT License
 
 ### アクション
 
-#### Close Input Field  
+#### Close Input Field
 入力欄を閉じる。
 
-#### Open Input Field  
-Open the Input Field.
+#### Open Input Field
+入力欄の文字列を変更した上で開く。
 
-#### Set String  
-Set a string to the Input Field.
+#### Set String
+入力欄の文字列を変更する。
 
-### String Expressions
+### 文字列式
 
 #### String
-Get a string from the Input Field.
+入力欄の文字列を取得する。
 
-## If you need multiple input fields.
-Do not place multiple instances with this extension in a scene. The "Is Finished" condition will no longer work.
-
-Even if there are multiple objects to which this behavior is added, there will be only one Input Field generated.
+## 複数の入力フィールドが必要な場合は
+この拡張機能が追加されたインスタンスを、1つのシーンに複数配置しないでください。  
+Is Finished の条件が機能しなくなります。
+（この拡張機能で生成される入力欄は1つだけです）
 
 
 
@@ -68,7 +68,7 @@ This extension is designed to work with various resolutions, but if you want to 
 
 Edit the stylesheet written in onCreated of Behavior functions.
 
-![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img03.png)
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img05.png)
 
 ### HTML
 ```
