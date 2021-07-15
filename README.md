@@ -11,6 +11,7 @@ MIT License
 - Cannot be used in conjunction with text input objects.
 - It can be used in mobile apps, but there is a slight problem.
 - It is practical, but there is room for improvement.
+- It is not a modal window. The game behind it can be manipulated.
 
 ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/img/img01.png)
 
@@ -18,4 +19,7 @@ MIT License
 1. Download the extension (.json).
 2. Import the extension into your game.
 3. Add InputCJK Behavior to any object.
-4. Create an event using the "Conditions", "Actions", and "Expressions" added by the extension.
+4. Place the object in your scene.
+5. Create an event using the "Conditions", "Actions", and "Expressions" added by the extension.
+
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/img/img02.png)
