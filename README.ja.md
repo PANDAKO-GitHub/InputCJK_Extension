@@ -1,5 +1,5 @@
 # InputCJK Extension
-[English](https://github.com/PANDAKO-GitHub/InputCJK_Extension/)
+[Click here for an explanation in English.](https://github.com/PANDAKO-GitHub/InputCJK_Extension/)
 
 これはマルチバイト文字（日本語、中国語、韓国語など）を入力できるようにする GDevelop 用の拡張機能です。
 
