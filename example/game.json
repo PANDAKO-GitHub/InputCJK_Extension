@@ -176,50 +176,6 @@
           }
         },
         {
-          "name": "SearchButton",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [
-            {
-              "name": "InputCJK_Behavior",
-              "type": "InputCJK_Extension::InputCJK_Behavior"
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.02500000037252903,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Btn.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "height": 128,
           "name": "PinkBackground",
           "tags": "",
@@ -326,6 +282,450 @@
                 "Output",
                 "=",
                 "Frame.InputCJK_Behavior::String()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 662980,
+          "ambientLightColorG": 1262,
+          "ambientLightColorR": 7103440,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "InputCJK_Behavior",
+          "type": "InputCJK_Extension::InputCJK_Behavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "multiple_32scene",
+      "name": "multiple scene",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.6799999999999997
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Output",
+          "persistentUuid": "a31ab6f8-807b-42c3-8530-445a8dc9073c",
+          "width": 0,
+          "x": 316,
+          "y": 369,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 540,
+          "layer": "",
+          "locked": false,
+          "name": "PinkBackground",
+          "persistentUuid": "1ee177f8-09ed-4557-845d-92e108a61c61",
+          "width": 960,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 36,
+          "layer": "",
+          "locked": false,
+          "name": "Frame",
+          "persistentUuid": "1dc5243b-02ba-42b7-b7b4-bdd228c3fd26",
+          "width": 346,
+          "x": 306,
+          "y": 363,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Output",
+          "persistentUuid": "08cdf9e0-cb7f-4fa5-8f8f-52a29bc41ab1",
+          "width": 0,
+          "x": 317,
+          "y": 238,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 36,
+          "layer": "",
+          "locked": false,
+          "name": "Frame",
+          "persistentUuid": "59ed3aa6-0394-4cbe-90eb-538b0bd5e320",
+          "width": 346,
+          "x": 307,
+          "y": 232,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Output",
+          "persistentUuid": "7bba14bc-8f87-470d-bfff-20645160b3f6",
+          "width": 0,
+          "x": 316,
+          "y": 302,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 36,
+          "layer": "",
+          "locked": false,
+          "name": "Frame",
+          "persistentUuid": "91282397-8d5f-464d-b0c3-456937ac62df",
+          "width": 346,
+          "x": 306,
+          "y": 296,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "InputCJK",
+          "persistentUuid": "c925b49f-5f62-443d-981b-9bdc01705ed5",
+          "width": 0,
+          "x": 7,
+          "y": 9,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Output",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "behaviors": [],
+          "string": "こんにちは 你好 안녕하세요",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "name": "InputCJK",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "CurrentId",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "InputCJK_Behavior",
+              "type": "InputCJK_Extension::InputCJK_Behavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Btn.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "height": 128,
+          "name": "PinkBackground",
+          "tags": "",
+          "texture": "tiled_Pink Background.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 128,
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "bottomMargin": 6,
+          "height": 32,
+          "leftMargin": 6,
+          "name": "Frame",
+          "rightMargin": 6,
+          "tags": "",
+          "texture": "Frame-1.png",
+          "tiled": false,
+          "topMargin": 6,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "behaviors": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Frame",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Output",
+                "Id",
+                "=",
+                "Frame.Variable(Id)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "InputCJK_Extension::InputCJK_Behavior::OpenInputField"
+              },
+              "parameters": [
+                "InputCJK",
+                "InputCJK_Behavior",
+                "Output.String()",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "InputCJK",
+                "CurrentId",
+                "=",
+                "Frame.Variable(Id)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "InputCJK_Extension::InputCJK_Behavior::IsFinished"
+              },
+              "parameters": [
+                "InputCJK",
+                "InputCJK_Behavior",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Output",
+                "Id",
+                "=",
+                "InputCJK.Variable(CurrentId)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "Output",
+                "=",
+                "InputCJK.InputCJK_Behavior::String()"
               ],
               "subInstructions": []
             }
@@ -477,12 +877,12 @@
               "objectGroups": []
             },
             {
-              "description": "",
+              "description": "Set a string to the input field and then open it.",
               "fullName": "Open Input Field",
               "functionType": "Action",
               "name": "OpenInputField",
               "private": false,
-              "sentence": "Open Input Field _PARAM0_ _PARAM2_",
+              "sentence": "Open _PARAM0_ and set _PARAM2_",
               "events": [
                 {
                   "disabled": false,
@@ -529,12 +929,12 @@
               "objectGroups": []
             },
             {
-              "description": "",
+              "description": "Close the Input Field.",
               "fullName": "Close Input Field",
               "functionType": "Action",
               "name": "CloseInputField",
               "private": false,
-              "sentence": "Close Input Field _PARAM0_",
+              "sentence": "Close _PARAM0_",
               "events": [
                 {
                   "disabled": false,
@@ -571,12 +971,12 @@
               "objectGroups": []
             },
             {
-              "description": "",
+              "description": "Set a string to the Input Field.",
               "fullName": "Set String",
               "functionType": "Action",
               "name": "SetString",
               "private": false,
-              "sentence": "Set String _PARAM0_ _PARAM2_",
+              "sentence": "Set _PARAM2_ to _PARAM0_",
               "events": [
                 {
                   "disabled": true,
@@ -645,7 +1045,7 @@
               "objectGroups": []
             },
             {
-              "description": "",
+              "description": "Get a string from the Input Field.",
               "fullName": "String",
               "functionType": "StringExpression",
               "name": "String",
@@ -687,12 +1087,12 @@
               "objectGroups": []
             },
             {
-              "description": "",
+              "description": "Input Field is open.",
               "fullName": "Is Open",
               "functionType": "Condition",
               "name": "IsOpen",
               "private": false,
-              "sentence": "Is Open _PARAM0_",
+              "sentence": "_PARAM0_ is open",
               "events": [
                 {
                   "disabled": false,
@@ -729,12 +1129,12 @@
               "objectGroups": []
             },
             {
-              "description": "",
+              "description": "Input Field is close.",
               "fullName": "Is Close",
               "functionType": "Condition",
               "name": "IsClose",
               "private": false,
-              "sentence": "Is Close _PARAM0_",
+              "sentence": "_PARAM0_ is close ",
               "events": [
                 {
                   "disabled": false,
@@ -771,12 +1171,12 @@
               "objectGroups": []
             },
             {
-              "description": "Is true only when just closed.",
+              "description": "Input Field has just been closed.",
               "fullName": "Is Finished",
               "functionType": "Condition",
               "name": "IsFinished",
               "private": false,
-              "sentence": "Is Finished _PARAM0_",
+              "sentence": "_PARAM0_ is finished ",
               "events": [
                 {
                   "disabled": false,
