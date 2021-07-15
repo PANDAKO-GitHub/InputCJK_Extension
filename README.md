@@ -1,5 +1,5 @@
 # InputCJK Extension
-日本語は下の方を見てね。
+[日本語はこちら](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/README.ja.md)
 
 This is an extension for GDevelop that allows you to input multi-byte characters (Japanese, Chinese, Korean, etc.).
 
