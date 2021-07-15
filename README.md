@@ -38,17 +38,17 @@ Input Field is close.
 Input Field has just been closed.
 
 #### Is Open
-Set a string to the input field and then open it.
+Input Field is open.
 
 ### Actions
 
-#### Close Input Field  
+#### Close Input Field
 Close the Input Field.
 
-#### Open Input Field  
-Open the Input Field.
+#### Open Input Field
+Set a string to the input field and then open it.
 
-#### Set String  
+#### Set String
 Set a string to the Input Field.
 
 ### String Expressions
