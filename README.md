@@ -13,7 +13,7 @@ MIT License
 - It is practical, but there is room for improvement.
 - It is not a modal window. The game behind it can be manipulated.
 
-![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/img/img01.png)
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img01.png)
 
 ## How to use
 1. Download the extension (.json).
@@ -22,4 +22,4 @@ MIT License
 4. Place the object in your scene.
 5. Create an event using the "Conditions", "Actions", and "Expressions" added by the extension.
 
-![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/img/img02.png)
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img02.png)
