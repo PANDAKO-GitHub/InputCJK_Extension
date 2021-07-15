@@ -5,6 +5,10 @@ This is an extension for GDevelop that allows you to input multi-byte characters
 
 Please download the latest version from [Releases](https://github.com/PANDAKO-GitHub/InputCJK_Extension/releases).
 
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img01.png)
+
+[Example]()
+
 MIT License
 
 **Notes**
@@ -12,8 +16,7 @@ MIT License
 - It can be used in mobile apps, but there is a slight problem.
 - It is practical, but there is room for improvement.
 - It is not a modal window. The game behind it can be manipulated.
-
-![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img01.png)
+- Even if there are multiple objects to which this behavior is added, there will be only one Input Field generated.
 
 ## How to use
 1. Download the extension (.json).
@@ -35,7 +38,7 @@ Input Field is close.
 Input Field has just been closed.
 
 #### Is Open
-Input Field is open.
+Set a string to the input field and then open it.
 
 ### Actions
 
@@ -52,3 +55,5 @@ Set a string to the Input Field.
 
 #### String
 Get a string from the Input Field.
+
+## Design customization
