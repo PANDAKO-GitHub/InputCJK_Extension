@@ -1,49 +1,49 @@
 # InputCJK Extension
-日本語は下の方を見てね。
+[English](https://github.com/PANDAKO-GitHub/InputCJK_Extension/)
 
-This is an extension for GDevelop that allows you to input multi-byte characters (Japanese, Chinese, Korean, etc.).
+これはマルチバイト文字（日本語、中国語、韓国語など）を入力できるようにする GDevelop 用の拡張機能です。
 
-Please download the latest version from [Releases](https://github.com/PANDAKO-GitHub/InputCJK_Extension/releases).
+最新版は [Releases](https://github.com/PANDAKO-GitHub/InputCJK_Extension/releases) ページからダウンロードしてください。
 
 ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img01.png)
 
-[Example]()
+[動作サンプル]()
 
 MIT License
 
-**Notes**
-- Cannot be used in conjunction with text input objects.
-- It can be used in mobile apps, but there is a slight problem.
-- It is practical, but there is room for improvement.
-- It is not a modal window. The game behind it can be manipulated.
-- Do not place multiple instances with this extension in a scene.
+**注意点**
+- 「テキストの入力」オブジェクトとの併用はできません。
+- モバイルアプリでも動作しますが少し問題があります。（後記）
+- 改善の余地はありますが実用は可能です。
+- これはモーダルウィンドウではありません。つまり背後にあるゲームは操作できます。
+- この拡張機能が追加されたインスタンスを1つのシーンに複数配置しないでください。（後記）
 
-## How to use
-1. Download the extension (.json).
-2. Import the extension into your game.
-3. Add InputCJK Behavior to any object.
-4. Place the object in your scene.
-5. Create an event using the "Conditions", "Actions", and "Expressions" added by the extension.
+## 使い方
+1. 拡張機能（.jsonファイル）をダウンロードします。
+2. ゲームにインポートします。
+3. 任意のオブジェクトに InputCJK ビヘイビアを追加します。
+4. そのオブジェクトをシーンに配置します。
+5. 拡張機能により追加された「条件」「アクション」「式」を使用してイベントを作成します。
 
-![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img02.png)
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img04.png)
 
 ## Reference
 
-### Conditions
+### 条件
 
 #### Is Close
-Input Field is close.
+入力欄は閉じている。
 
 #### Is Finished
-Input Field has just been closed.
+入力欄が閉じた直後。
 
 #### Is Open
-Set a string to the input field and then open it.
+入力欄は開いている。
 
-### Actions
+### アクション
 
 #### Close Input Field  
-Close the Input Field.
+入力欄を閉じる。
 
 #### Open Input Field  
 Open the Input Field.
