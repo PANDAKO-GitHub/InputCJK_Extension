@@ -7,7 +7,7 @@
 
 ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img01.png)
 
-[動作サンプル]()
+[動作サンプル](https://pandako-github.github.io/InputCJK_Extension/)
 
 MIT License
 
