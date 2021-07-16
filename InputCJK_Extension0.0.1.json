@@ -1,0 +1,450 @@
+{
+  "author": "PANDAKO-GitHub",
+  "description": "This is an extension that displays a window where you can enter multi-byte characters such as Japanese, Chinese, and Korean.",
+  "extensionNamespace": "",
+  "fullName": "InputCJK Extension",
+  "helpPath": "https://github.com/PANDAKO-GitHub/InputCJK_Extension",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHJlY3QgeD0iMyIgeT0iMTIiIGNsYXNzPSJzdDAiIHdpZHRoPSIyNiIgaGVpZ2h0PSIxMCIvPg0KPGxpbmUgY2xhc3M9InN0MCIgeDE9IjYiIHkxPSIxNSIgeDI9IjEwIiB5Mj0iMTUiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSI4IiB5MT0iMTkiIHgyPSI4IiB5Mj0iMTUiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSIxMSIgeTE9IjgiIHgyPSIxNSIgeTI9IjgiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSIxMSIgeTE9IjI2IiB4Mj0iMTUiIHkyPSIyNiIvPg0KPGxpbmUgY2xhc3M9InN0MCIgeDE9IjEzIiB5MT0iMjYiIHgyPSIxMyIgeTI9IjgiLz4NCjwvc3ZnPg0K",
+  "name": "InputCJK_Extension",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Text Editing/Text Editing_input_field.svg",
+  "shortDescription": "An extension for entering multibyte characters for GDevelop.",
+  "version": "0.0.1",
+  "tags": [
+    "Input",
+    "String",
+    "Text"
+  ],
+  "dependencies": [],
+  "eventsFunctions": [],
+  "eventsBasedBehaviors": [
+    {
+      "description": "Please add it to any object and use it.\nCannot be used with Text entry object.",
+      "fullName": "InputCJK Behavior",
+      "name": "InputCJK_Behavior",
+      "objectType": "",
+      "eventsFunctions": [
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onCreated",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "if (!gdjs._InputCJK_Extension) {\n    const CSS = document.createElement(\"style\");\n    CSS.innerHTML = `\n    /*CSS Start ================================================*/\n    #InputCJK_Extension_div {\n        position: absolute;\n        display: flex;\n        flex-flow: column nowrap;\n        justify-content: space-around;\n        background-color: #ffffff;\n        padding: 5vmin;\n        top: 0vh;\n        right: 5vw;\n        left: 5vw;\n        bottom: 60vh;\n        border-radius: 0px 0px 2vmin 2vmin;\n        box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.25);\n    }\n    #InputCJK_Extension_div input {\n        font-size: 6vmin;\n        height: 10vh;\n    }\n    #InputCJK_Extension_div button {\n        height: 10vh;\n        border-radius: 2vmin;\n        background-color: #cccccc;\n        border: none;\n        font-size: 6vmin;\n    }\n    /*CSS End ==================================================*/\n    `;\n    const DIV = document.createElement(\"div\");\n    DIV.id = \"InputCJK_Extension_div\";\n    DIV.innerHTML = \"<input type='text'><button type='button'>OK</button>\";\n    document.body.appendChild(CSS);\n    document.body.appendChild(DIV);\n    //\n    gdjs._InputCJK_Extension = {};\n    gdjs._InputCJK_Extension.state = 0;\n    gdjs._InputCJK_Extension.initialDisplay = getComputedStyle(DIV).display;\n    const IPT = document.querySelector(\"#InputCJK_Extension_div input\");\n    const BTN = document.querySelector(\"#InputCJK_Extension_div button\");\n    gdjs._InputCJK_Extension.onClickOk = function (evt) {\n        gdjs._InputCJK_Extension.hide();\n        evt.stopPropagation();\n    };\n    BTN.addEventListener(\"touchend\", gdjs._InputCJK_Extension.onClickOk, false);\n    BTN.addEventListener(\"click\", gdjs._InputCJK_Extension.onClickOk, false);\n    IPT.addEventListener(\"touchstart\", (evt) => {evt.stopPropagation();}, false);\n    IPT.addEventListener(\"touchmove\", (evt) => {evt.stopPropagation();}, false);\n    IPT.addEventListener(\"touchend\", (evt) => {evt.stopPropagation();}, false);\n    //\n    gdjs._InputCJK_Extension.show = function (STR) {\n        IPT.value = STR;\n        DIV.style.display = this.initialDisplay;\n    };\n    gdjs._InputCJK_Extension.hide = function () {\n        DIV.style.display = \"none\";\n    };\n    gdjs._InputCJK_Extension.hide();\n}\n",
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "name": "doStepPostEvents",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "if (gdjs._InputCJK_Extension) {\n    const E = document.getElementById(\"InputCJK_Extension_div\");\n    const S = gdjs._InputCJK_Extension.state;\n    //0=Close, 1=Open, 2=Closing(Finished)\n    if (S === 0) {\n        if (E.style.display != \"none\") {\n            gdjs._InputCJK_Extension.state = 1;\n        }\n    } else if (S === 1) {\n        if (E.style.display == \"none\") {\n            gdjs._InputCJK_Extension.state = 2;\n        }\n    } else if (S === 2) {\n        gdjs._InputCJK_Extension.state = 0;\n    }\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Set a string to the input field and then open it.",
+          "fullName": "Open Input Field",
+          "functionType": "Action",
+          "name": "OpenInputField",
+          "private": false,
+          "sentence": "Open _PARAM0_ and set _PARAM2_",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "if (gdjs._InputCJK_Extension) {\r\n    gdjs._InputCJK_Extension.show(eventsFunctionContext.getArgument(\"String\"));\r\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Initial string",
+              "longDescription": "",
+              "name": "String",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Close the Input Field.",
+          "fullName": "Close Input Field",
+          "functionType": "Action",
+          "name": "CloseInputField",
+          "private": false,
+          "sentence": "Close _PARAM0_",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "if (gdjs._InputCJK_Extension) {\r\n    gdjs._InputCJK_Extension.hide();\r\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Set a string to the Input Field.",
+          "fullName": "Set String",
+          "functionType": "Action",
+          "name": "SetString",
+          "private": false,
+          "sentence": "Set _PARAM2_ to _PARAM0_",
+          "events": [
+            {
+              "disabled": true,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Object",
+                    "_InputCJK_Extension_string",
+                    "=",
+                    "GetArgumentAsString(\"String\")"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "const E = document.querySelector(\"#InputCJK_Extension_div input\");\nif (E) {\n    E.value = eventsFunctionContext.getArgument(\"String\");\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "String",
+              "longDescription": "",
+              "name": "String",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Get a string from the Input Field.",
+          "fullName": "String",
+          "functionType": "StringExpression",
+          "name": "String",
+          "private": false,
+          "sentence": "String _PARAM0_",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "eventsFunctionContext.returnValue = \"\";\nconst E = document.querySelector(\"#InputCJK_Extension_div input\");\nif (E) {\n    eventsFunctionContext.returnValue = E.value;\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Input Field is open.",
+          "fullName": "Is Open",
+          "functionType": "Condition",
+          "name": "IsOpen",
+          "private": false,
+          "sentence": "_PARAM0_ is open",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "eventsFunctionContext.returnValue = false;\r\nconst E = document.getElementById(\"InputCJK_Extension_div\");\r\nif (E) {\r\n    if (E.style.display != \"none\") {\r\n        eventsFunctionContext.returnValue = true;\r\n    }\r\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Input Field is close.",
+          "fullName": "Is Close",
+          "functionType": "Condition",
+          "name": "IsClose",
+          "private": false,
+          "sentence": "_PARAM0_ is close ",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "eventsFunctionContext.returnValue = false;\r\nconst E = document.getElementById(\"InputCJK_Extension_div\");\r\nif (E) {\r\n    if (E.style.display == \"none\") {\r\n        eventsFunctionContext.returnValue = true;\r\n    }\r\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Input Field has just been closed.",
+          "fullName": "Is Finished",
+          "functionType": "Condition",
+          "name": "IsFinished",
+          "private": false,
+          "sentence": "_PARAM0_ is finished ",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "eventsFunctionContext.returnValue = false;\nif (gdjs._InputCJK_Extension) {\n    if (gdjs._InputCJK_Extension.state === 2) {\n        eventsFunctionContext.returnValue = true;\n    }\n}",
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "InputCJK_Extension::InputCJK_Behavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": []
+    }
+  ]
+}
