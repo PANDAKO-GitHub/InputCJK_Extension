@@ -20,10 +20,11 @@ MIT License
 
 ## How to use
 1. Download the extension (.json).
-2. Import the extension into your game.  ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img08.png)
-4. Add InputCJK Behavior to any object.
-5. Place the object in your scene.
-6. Create an event using the "Conditions", "Actions", and "Expressions" added by the extension.
+2. Import the extension into your game.  
+![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img08.png)
+3. Add InputCJK Behavior to any object.
+4. Place the object in your scene.
+5. Create an event using the "Conditions", "Actions", and "Expressions" added by the extension.
 
 ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img02.png)
 
