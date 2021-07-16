@@ -20,7 +20,7 @@ MIT License
 
 ## 使い方
 1. 拡張機能（.jsonファイル）をダウンロードします。
-2. ゲームにインポートします。
+2. ゲームにインポートします。  ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img09.png)
 3. 任意のオブジェクトに InputCJK ビヘイビアを追加します。
 4. そのオブジェクトをシーンに配置します。
 5. 拡張機能により追加された「条件」「アクション」「式」を使用してイベントを作成します。
