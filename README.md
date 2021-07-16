@@ -7,7 +7,7 @@ Please download the latest version from [Releases](https://github.com/PANDAKO-Gi
 
 ![](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/images/img01.png)
 
-[Example]()
+[Example](https://pandako-github.github.io/InputCJK_Extension/)
 
 MIT License
 
