@@ -11,11 +11,12 @@
     "folderProject": false,
     "orientation": "landscape",
     "packageName": "com.pandako.InputCJK_Extension",
+    "pixelsRounding": false,
     "projectUuid": "9fb83790-322a-4ddd-bf99-2a5c2ac3c66f",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
-    "version": "0.0.1",
+    "version": "0.0.2",
     "name": "InputCJK_Extension",
     "author": "PANDAKO",
     "windowWidth": 960,
@@ -26,8 +27,24 @@
     "verticalSync": false,
     "platformSpecificAssets": {},
     "loadingScreen": {
-      "showGDevelopSplash": false
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": false,
+      "showProgressBar": true
     },
+    "authorIds": [
+      "Zu55H5hcb9YmZTltIVOTAFDJQyB2"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -275,6 +292,7 @@
               "value": 0
             }
           ],
+          "effects": [],
           "behaviors": [],
           "string": "こんにちは 你好 안녕하세요",
           "font": "",
@@ -297,6 +315,7 @@
               "value": 0
             }
           ],
+          "effects": [],
           "behaviors": [
             {
               "name": "InputCJK_Behavior",
@@ -343,6 +362,7 @@
           "type": "TiledSpriteObject::TiledSprite",
           "width": 128,
           "variables": [],
+          "effects": [],
           "behaviors": []
         },
         {
@@ -364,6 +384,7 @@
               "value": 0
             }
           ],
+          "effects": [],
           "behaviors": []
         }
       ],
@@ -609,6 +630,7 @@
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
+          "effects": [],
           "behaviors": [],
           "string": "こんにちは 你好 안녕하세요",
           "font": "",
@@ -627,6 +649,7 @@
           "type": "TiledSpriteObject::TiledSprite",
           "width": 128,
           "variables": [],
+          "effects": [],
           "behaviors": []
         },
         {
@@ -642,6 +665,7 @@
           "type": "PanelSpriteObject::PanelSprite",
           "width": 32,
           "variables": [],
+          "effects": [],
           "behaviors": [
             {
               "name": "InputCJK_Behavior",
@@ -777,11 +801,14 @@
       "name": "InputCJK_Extension",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Text Editing/Text Editing_input_field.svg",
       "shortDescription": "An extension for entering multibyte characters for GDevelop.",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "tags": [
         "Input",
         "String",
         "Text"
+      ],
+      "authorIds": [
+        "Zu55H5hcb9YmZTltIVOTAFDJQyB2"
       ],
       "dependencies": [],
       "eventsFunctions": [],
