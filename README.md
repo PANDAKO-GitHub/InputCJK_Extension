@@ -1,3 +1,6 @@
+**⚠️ This extension is no longer needed.**  
+Please use the built-in Text input object as a replacement.
+
 # InputCJK Extension
 [日本語はこちら](https://github.com/PANDAKO-GitHub/InputCJK_Extension/blob/main/README.ja.md)
 

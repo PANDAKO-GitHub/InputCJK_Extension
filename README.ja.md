@@ -1,3 +1,6 @@
+**⚠️ この拡張機能は役目を終えました。**  
+代わりに「テキスト入力」オブジェクトを利用してください。
+
 # InputCJK Extension
 [Click here for an explanation in English.](https://github.com/PANDAKO-GitHub/InputCJK_Extension/)
 
